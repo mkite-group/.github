@@ -1,8 +1,8 @@
 <div align="center">
-  <img src=_static/mkite-logo.svg width="500"><br>
+  <img src="https://raw.githubusercontent.com/mkite-group/mkite_db/main/docs/_static/mkite-logo.svg" width="500"><br>
 </div>
 
-# Welcome to the mkite suite
+# mkite suite
 
 mkite is a suite of tools for running high-throughput materials simulations in distributed computing platforms.
 The mkite suite decouples the production database from client workers, facilitating scaling of simulations across heterogeneous computing environments.
@@ -14,6 +14,24 @@ Some advantages of mkite:
 - The server is agnostic to the computing environments where the tasks are performed, and the clients are unaware of the production database. This facilitates distributing the tasks across heterogeneous computing systems.
 - It provides textual descriptions for workflows, and enables adapting them on-the-fly. This helps as a "lab notebook" for computational materials scientists.
 - It is adaptable to many software packages and inputs. The recipe system also interacts well with other libraries, such as ASE, pymatgen, cclib, and more.
+
+## Repositories
+
+The mkite suite has several main repositories:
+
+- [mkite_core](https://github.com/mkite-group/mkite_core): schema and essential interfaces for mkite
+- [mkite_engines](https://github.com/mkite-group/mkite_engines): message brokers for jobs in mkite
+- [mkite_db](https://github.com/mkite-group/mkite_db): Django server with the mkite toolbox for workflow management
+- [mkwind](https://github.com/mkite-group/mkwind): job building, running, and postprocessing daemons
+
+In addition, mkite has several "recipes" that allow specific jobs to be created.
+As of now, example plugins are:
+
+- [mkite_conformer](https://github.com/mkite-group/mkite_conformer): enables molecular conformer generation with RDKit
+- [mkite_vasp](https://github.com/mkite-group/mkite_vasp): enables running jobs with VASP (powered by [Custodian](https://github.com/materialsproject/custodian)).
+- [mkite_catalysis](https://github.com/mkite-group/mkite_catalysis): provides tools for generating structures relevant for catalyst modeling (surfaces, adsorption etc).
+
+The documentation and tutorial are available at [mkite_docs](https://github.com/mkite-group/mkite_docs/).
 
 ## Documentation
 
